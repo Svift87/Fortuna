@@ -1,48 +1,81 @@
-// modal company
+window.addEventListener('DOMContentLoaded', function () {
+    // modal company
 
-function companyModal () {
-    let companyClosed = document.querySelector('.company__closed'),
-        companyOpen = document.querySelector('.company__open'),
-        companyContainer = document.querySelector('.company__container');
+    function companyModal () {
+        let companyClosed = document.querySelector('.company__closed'),
+            companyOpen = document.querySelector('.company__open'),
+            companyContainer = document.querySelector('.company__container');
 
-    companyOpen.addEventListener('click', function () {
-        companyContainer.classList.add('company__container--active');
-    });
-    companyClosed.addEventListener('click', function() {
-        companyContainer.classList.remove('company__container--active')
-    });
-}
+        if (companyOpen != undefined) {
+            companyOpen.addEventListener('click', function () {
+                companyContainer.classList.add('company__container--active');
+            });
+            companyClosed.addEventListener('click', function() {
+                companyContainer.classList.remove('company__container--active')
+            });
+        }    
+    }
 
-companyModal();
+    companyModal();
 
-// modal adress
+    // modal adress
 
-function adressModal () {
-    let adressBtn = document.querySelectorAll('.adress__btn'),
-        adress = document.querySelector('.adress'),
-        adressClosed = document.querySelector('.adress__closed');
+    function adressModal () {
+        let adressBtn = document.querySelectorAll('.adress__btn'),
+            adress = document.querySelector('.adress'),
+            adressClosed = document.querySelector('.adress__closed');
 
-    for (let i = 0; adressBtn.length > i; i++) {
-        adressBtn[i].addEventListener('click', function () {
-            adress.classList.add('adress--active');
-        });
-        adressClosed.addEventListener('click', function(){
-            adress.classList.remove('adress--active');
+        if (adress != undefined) {
+            for (let i = 0; adressBtn.length > i; i++) {
+                adressBtn[i].addEventListener('click', function () {
+                    adress.classList.add('adress--active');
+                });
+                adressClosed.addEventListener('click', function(){
+                    adress.classList.remove('adress--active');
+                });
+            }
+        }
+        
+    }
+
+    adressModal();
+
+    // burger 
+
+    function burger () {
+        let headerBurger = document.querySelector('.header__burger'),
+            haderNav = document.querySelector('.hader__nav');
+
+        headerBurger.addEventListener('click', function() {
+            haderNav.classList.toggle('hader__nav--active');
         });
     }
-}
 
-adressModal();
+    burger ()
 
-// burger 
+    // tabe
 
-function burger () {
-    let headerBurger = document.querySelector('.header__burger'),
-        haderNav = document.querySelector('.hader__nav');
+    function tabe() {
+        let partnersBlockTabs = document.querySelector('.partners__block-tabs'),
+            partnersBlockContainers = document.querySelector('.partners__block-containers');
 
-    headerBurger.addEventListener('click', function() {
-        haderNav.classList.toggle('hader__nav--active');
-    });
-}
+        if (partnersBlockTabs != undefined) {
+            let partnersTab = partnersBlockTabs.querySelectorAll('.partners__tab'),
+                partnersBlockContainer = partnersBlockContainers.querySelectorAll('.partners__block-container');
 
-burger ()
+            for (let i = 0; partnersTab.length > i; i++) {
+                partnersTab[i].addEventListener('click', function(){
+                    for (let a = 0; partnersTab.length > a; a++) {
+                        partnersTab[a].classList.remove('partners__tab--active');
+                        partnersBlockContainer[a].classList.remove('partners__block-container--active');
+                    }
+                    partnersTab[i].classList.add('partners__tab--active');
+                    partnersBlockContainer[i].classList.add('partners__block-container--active');
+                })
+            }
+        }
+        
+    }
+
+    tabe()
+})
