@@ -78,4 +78,79 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     tabe()
+
+    // modal adress room
+
+    function adressModalRoom () {
+        let roomBntPopap = document.querySelectorAll('.room__bnt-popap'),
+            roomHiden = document.querySelector('.room__hiden'),
+            adressClosed = document.querySelector('.adress__closed');
+
+        if (roomHiden != undefined) {
+            for (let i = 0; roomBntPopap.length > i; i++) {
+                roomBntPopap[i].addEventListener('click', function () {
+                    roomHiden.classList.add('room__hiden--active');
+                });
+                adressClosed.addEventListener('click', function(){
+                    roomHiden.classList.remove('room__hiden--active');
+                });
+            }
+        }
+        
+    }
+
+    adressModalRoom();
+
+    // popap  Request
+
+    function popapRequest () {
+        let requestPopap = document.querySelector('.request-popap'),
+            headerCashback = document.querySelector('.header__cashback'),
+            requestClosed = document.querySelector('.request__closed');
+
+        if (headerCashback != undefined) {
+            headerCashback.addEventListener('click', function() {
+                requestPopap.classList.add('active');
+            })
+            requestClosed.addEventListener('click', function() {
+                requestPopap.classList.remove('active');
+            })
+        }        
+    }
+    
+    popapRequest ();
+
+    // popap booking
+
+    function popapBooking () {
+        let bookingPopap = document.querySelector('.booking-popap'),
+            uncertaintyCashback = document.querySelector('.uncertainty__cashback'),
+            bookingClosed = document.querySelector('.booking__closed');
+
+        if (uncertaintyCashback != undefined) {
+            uncertaintyCashback.addEventListener('click', function() {
+                bookingPopap.classList.add('active');
+            })
+            bookingClosed.addEventListener('click', function() {
+                bookingPopap.classList.remove('active');
+            })
+        }        
+    }
+    
+    popapBooking ();
+
+    // booking plus input
+
+    function bookingPlus () {
+        let bookingTop = document.getElementById('bookingBlockTop'),
+            goodsTypeEl = bookingTop.querySelector('.goods-type__el'),
+            bookingBtnPlus = bookingTop.querySelector('.booking__btn-plus'),
+            newType = goodsTypeEl.outerHTML;
+
+        bookingBtnPlus.addEventListener('click', function(){
+            goodsTypeEl.insertAdjacentHTML('afterEnd', newType);
+        })
+    }
+
+    bookingPlus ();
 })

@@ -127,8 +127,9 @@ body {
 .btn {
   -webkit-box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.54);
           box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.54);
-  background: -o-linear-gradient(273deg, #7dab00 0%, #f0ff74 100%);
-  background: linear-gradient(177deg, #7dab00 0%, #f0ff74 100%);
+  background: -webkit-gradient(linear, right top, left top, from(#7dab00), to(#f0ff74));
+  background: -o-linear-gradient(right, #7dab00 0%, #f0ff74 100%);
+  background: linear-gradient(-90deg, #7dab00 0%, #f0ff74 100%);
   border: none;
   color: #000;
   border-radius: 20px;
@@ -139,13 +140,27 @@ body {
   padding-right: 20px;
   font-weight: 900;
   font-size: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 .btn:hover {
-  background: -o-linear-gradient(273deg, #f0ff74 0%, #7dab00 100%);
-  background: linear-gradient(177deg, #f0ff74 0%, #7dab00 100%);
+  background: -webkit-gradient(linear, right top, left top, from(#f0ff74), to(#7dab00));
+  background: -o-linear-gradient(right, #f0ff74 0%, #7dab00 100%);
+  background: linear-gradient(-90deg, #f0ff74 0%, #7dab00 100%);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -153,8 +168,9 @@ body {
 .btn:active {
   -webkit-box-shadow: none;
           box-shadow: none;
-  background: -o-linear-gradient(273deg, #f0ff74 0%, #7dab00 100%);
-  background: linear-gradient(177deg, #f0ff74 0%, #7dab00 100%);
+  background: -webkit-gradient(linear, right top, left top, from(#f0ff74), to(#7dab00));
+  background: -o-linear-gradient(right, #f0ff74 0%, #7dab00 100%);
+  background: linear-gradient(-90deg, #f0ff74 0%, #7dab00 100%);
 }
 .banner-main__header {
   font-size: 90px;
@@ -394,6 +410,9 @@ body {
   border-left: solid 1px #aaa;
   background-color: #eee;
 }
+.company__hiden-block p {
+  font-size: 18px;
+}
 .company__closed {
   position: -webkit-sticky;
   position: sticky;
@@ -406,9 +425,6 @@ body {
   font-size: 18px;
   text-align: center;
   cursor: pointer;
-}
-.company__hiden-text {
-  font-size: 18px;
 }
 .company__header {
   font-size: 30px;
@@ -962,6 +978,793 @@ body {
 .pros__card-text {
   margin-left: 15px;
 }
+.main--partners {
+  background-image: url(../img/backround8.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main--company {
+  background-image: url(../img/backround9.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.company-card {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  background-color: #fff;
+  min-height: 200px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+.company-card .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+.company-card__text {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.company-card__link {
+  font-size: 25px;
+  font-weight: bold;
+  color: #545454;
+  text-decoration: none;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 35%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.company-card__social-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+.company-card__social {
+  width: 70px;
+  height: 70px;
+  margin-right: 30px;
+}
+.company-card__social:last-child {
+  margin-right: 0;
+}
+.company-card__video {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+.company-card__video img {
+  width: 80%;
+}
+.company-card__requisites {
+  padding-bottom: 40px;
+}
+.company-card__requisites h3 {
+  font-size: 30px;
+}
+.company-card__requisites p {
+  font-size: 20px;
+}
+.manager__personality {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+.manager__personality--img {
+  margin-right: 20px;
+}
+.manager__personality--top {
+  margin: 0;
+  font-size: 25px;
+}
+.manager__personality--text {
+  margin: 0;
+  font-size: 25px;
+}
+.goods-type__el {
+  position: relative;
+  width: 250px;
+  margin-right: 40px;
+}
+.goods-type__el::after {
+  content: '';
+  width: 33px;
+  height: 17px;
+  background-image: url(../img/right-arrow.png);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  right: 21px;
+  top: 50%;
+  margin-top: -8px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.select-beauty {
+  -webkit-appearance: none;
+  width: 100%;
+  padding-left: 20px;
+  border-radius: 30px;
+  height: 48px;
+  font-size: 20px;
+}
+.manager__filter--text {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  margin-right: 10px;
+}
+.manager__filter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+.manager__filter--btn {
+  width: 20%;
+  min-width: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: normal;
+  border-radius: 30px;
+  height: 48px;
+  background: #EBEBEB;
+}
+.manager__filter--btn:hover,
+.manager__filter--btn:active {
+  background: #F6FFA7;
+}
+.manager__table--text {
+  font-size: 20px;
+}
+.manager__table--info {
+  background-color: #F2F2F2;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.manager__table--info span {
+  font-weight: bold;
+}
+.manager__booking {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 2px;
+  margin-bottom: 50px;
+}
+.manager__booking-cell {
+  height: 100px;
+  cursor: pointer;
+}
+.manager__booking-cell--min {
+  background-color: #b5ffff;
+}
+.manager__booking-cell--average {
+  background-color: #c6ffc6;
+}
+.manager__booking-cell--top {
+  background-color: #fff798;
+}
+.manager__info-text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-bottom: 50px;
+  font-size: 28px;
+}
+.manager__info-list {
+  margin: 0;
+}
+.manager__info-list span {
+  font-weight: bold;
+}
+.online__block {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.online__block .discount__header {
+  font-size: 35px;
+  font-weight: normal;
+}
+.online__block .discount__header span {
+  display: block;
+  font-size: 42px;
+  font-weight: bold;
+}
+.online__block .discount__text {
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+.online__text {
+  font-size: 18px;
+}
+.online__booking {
+  width: 100%;
+  background-image: url(../img/border.png);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 25px 28px 37px 31px;
+  margin-bottom: 30px;
+}
+.online__booking td {
+  text-align: center;
+  border: 1px solid #000;
+}
+.online__booking tr {
+  height: 100px;
+}
+.online__booking img {
+  width: 100%;
+}
+.online__booking-cell {
+  height: 100px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.online__booking-cell img {
+  width: 100%;
+}
+.main--online {
+  background-image: url(../img/backround10.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.background__top-company {
+  background-image: url(../img/backround7.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 30px;
+  position: relative;
+  margin-bottom: 70px;
+}
+.background__top-company .about-company__info,
+.background__top-company .bread * {
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+.background__top-company::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.about-company__trust {
+  margin-bottom: 50px;
+}
+.about-company--btn {
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.about-company__header {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 70px;
+}
+.background__bottom-company {
+  background-image: url(../img/backround4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 50px;
+  padding-top: 100px;
+  position: relative;
+}
+.background__bottom-company .about-company__employees {
+  position: relative;
+  z-index: 2;
+}
+.background__bottom-company::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.about-company__header--employees {
+  color: #fff;
+}
+.about-company__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 70px;
+}
+.about-company__img {
+  width: 100%;
+  height: 300px;
+}
+.about-company__card {
+  background-color: #fff;
+}
+.about-company__card--person {
+  text-align: center;
+  width: 96%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #545454;
+  color: #545454;
+}
+.about-company__card--contacts {
+  width: 96%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.about-company__requisites h3 {
+  font-size: 30px;
+  color: #545454;
+}
+.about-company__requisites p {
+  font-size: 20px;
+  color: #545454;
+}
+.main--about-company {
+  background-image: url(../img/backround11.png);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.room .container {
+  position: relative;
+}
+.room__table {
+  width: 100%;
+}
+.room__table tr {
+  height: 80px;
+}
+.room__table tr > *:nth-child(n + 2) {
+  text-align: center;
+}
+.room__table tr > *:nth-child(2n) {
+  background-color: #E8E8E8;
+}
+.room__coverage {
+  font-size: 25px;
+  text-align: right;
+  color: #545454;
+}
+.room__btn-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+.room__maps-header {
+  font-size: 30px;
+  text-align: center;
+  color: #545454;
+}
+.room__bnt-popap {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.room__bnt-popap:hover {
+  text-decoration: none;
+}
+.room__btn {
+  background: #EBEBEB;
+}
+.room__btn:hover,
+.room__btn:active {
+  background: #F6FFA7;
+}
+.room .maps {
+  margin: 0;
+}
+.room__hiden--active {
+  display: block;
+}
+.request__container {
+  width: 450px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.request__header {
+  background-image: url(../img/popap-header.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+.request__header h2 {
+  margin: 0;
+}
+.request__closed {
+  font-size: 20px;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+.request__form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+.request__input {
+  width: 90%;
+  margin-bottom: 20px;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 10px;
+  border-radius: 20px;
+  border: 1px solid #545454;
+}
+.request__btn {
+  width: 90%;
+}
+.request-popap {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.request-popap.active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.booking-popap {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.booking-popap.active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+}
+.booking__closed {
+  font-size: 20px;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+.booking__form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+.booking__input {
+  width: 90%;
+  margin-bottom: 20px;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 10px;
+  border-radius: 20px;
+  border: 1px solid #545454;
+}
+.booking__container {
+  width: 800px;
+  border-radius: 5px;
+  background-color: #fff;
+  top: 0;
+  position: absolute;
+}
+.booking__header {
+  background-image: url(../img/popap-header.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+.booking__header h2 {
+  margin: 0;
+  font-size: 25px;
+  color: #545454;
+}
+.booking__btn {
+  width: 90%;
+}
+.booking__text {
+  margin-top: 0;
+}
+.booking__steps {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 1px solid #545454;
+  padding-bottom: 5px;
+  margin-top: 10px;
+}
+.booking__step {
+  font-size: 22px;
+}
+.booking__step.active {
+  font-weight: bold;
+}
+.booking__btn {
+  background: #EBEBEB;
+}
+.booking__btn:hover,
+.booking__btn:active {
+  background: #F6FFA7;
+}
+.booking__booking {
+  margin-bottom: 0;
+}
+.booking__booking .manager__booking-cell {
+  height: 40px;
+}
+.booking__right-container p:first-child {
+  margin-top: 0;
+}
+.booking__right-container span {
+  font-weight: bold;
+}
+.booking__form--right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.booking__form-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+  grid-gap: 10px;
+}
+.booking__select-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin-bottom: 30px;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.booking__select-block .goods-type__el {
+  margin-right: 0;
+  margin-left: 20px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.booking__select-block span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.booking__select-block .select-beauty {
+  padding-right: 55px;
+}
+.booking__btn-plus {
+  background-image: url(../img/close.png);
+  background-size: 50% 50%;
+  border: 1px solid #000;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 20px;
+  cursor: pointer;
+}
+#bookingBlockTop .goods-type__el {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.booking__form--cool {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
 @media only screen and (max-width: 1024px) {
   .banner-main {
     margin-top: -350px;
@@ -1113,6 +1916,30 @@ body {
     border: 1px solid #000;
     background-color: #fff;
   }
+  .company-card__video img {
+    width: 100%;
+  }
+  .company-card__social img {
+    height: 100%;
+  }
+  .online__block .discount__header {
+    font-size: 26px;
+  }
+  .online__block .discount__header span {
+    font-size: 32px;
+  }
+  .online__block .discount__text {
+    font-size: 24px;
+    margin-top: -35px;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+  .about-company__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .booking__container {
+    max-width: 100%;
+  }
 }
 @media only screen and (max-width: 768px) {
   .uncertainty .container {
@@ -1187,6 +2014,63 @@ body {
   .partners__card {
     height: 150px;
   }
+  .goods-type__el {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  .manager__filter {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .goods-type__el {
+    width: 70%;
+  }
+  .manager__filter--btn {
+    width: 100%;
+  }
+  .manager__filter--text {
+    width: 25%;
+  }
+  .manager__booking-cell {
+    height: 60px;
+  }
+  .manager__info-text {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .manager__info-list span {
+    display: block;
+  }
+  .online__booking {
+    padding: 15px 17px 22px 17px;
+  }
+  .online__booking tr {
+    height: 60px;
+  }
+  .room__btn-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .room__btn {
+    margin-bottom: 20px;
+  }
+  .room__table tr {
+    height: 60px;
+    font-size: 12px;
+  }
+  .room__coverage {
+    font-size: 18px;
+  }
+  .room__maps-header {
+    font-size: 20px;
+  }
+  .booking__form-block {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 @media only screen and (max-width: 480px) {
   .banner-main__arrow {
@@ -1222,7 +2106,7 @@ body {
     padding: 10px;
     width: 100%;
   }
-  .company__hiden-text {
+  .company__hiden-block p {
     font-size: 12px;
   }
   .company__header {
@@ -1297,5 +2181,39 @@ body {
   }
   .pros__container {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .company-card__logo-company {
+    width: 100%;
+  }
+  .manager__personality--top,
+  .manager__personality--text {
+    font-size: 20px;
+  }
+  .manager__filter--text {
+    font-size: 16px;
+  }
+  .select-beauty {
+    font-size: 16px;
+  }
+  .manager__info-text {
+    font-size: 16px;
+  }
+  .online__booking {
+    padding: 15px 6px 22px 6px;
+  }
+  .discount__header {
+    width: 100%;
+  }
+  .about-company__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .adress__closed {
+    font-size: 20px;
+  }
+  .blok__oveflow {
+    overflow-x: auto;
+  }
+  .request__container {
+    width: 100%;
   }
 }
