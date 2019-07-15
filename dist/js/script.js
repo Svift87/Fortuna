@@ -153,4 +153,58 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     bookingPlus ();
+
+    
 })
+
+// owl carusel
+
+$(document).ready(function(){
+    $("#caruselOnline").owlCarousel({
+        loop:true,
+        nav:true,
+        dots:false,
+        responsive: {
+            0:{
+                items:1,
+                dots:true,
+                nav:false
+            },
+            481:{
+                items:2,
+                dots:true,
+                nav:false
+            },
+            769:{
+                items:3
+            },
+            1025:{
+                items:5
+            }
+        }
+    });
+    
+    $("#caruselAboutCompany").owlCarousel({
+        loop:true,
+        nav:true,
+        dots:false,
+        responsive: {
+            0:{
+                items:1,
+                dots:true,
+                nav:false
+            },
+            481:{
+                items:2,
+                dots:true,
+                nav:false
+            },
+            769:{
+                items:3
+            },
+            1025:{
+                items:5
+            }
+        }
+    });
+});

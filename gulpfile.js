@@ -68,7 +68,8 @@ gulp.task('build', ['del', 'less', 'images'], function () {
         'src/**/*.ttf',
         'src/**/*.eot',
         'src/**/script.js',
-        'src/**/jquery.min.js'
+        'src/**/jquery.min.js',
+        'src/**/OwlCarousel2',
     ])
     .pipe(gulp.dest('dist'))
 });
